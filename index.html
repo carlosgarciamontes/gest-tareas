@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Tareas</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<header class="bg-blue-600/70  text-white p-4">
+    <h1 class="text-2xl font-bold">Gestión Tareas</h1>
+</header>
+<main class="p-4">
+    <section class="mb-6">
+        <h2 class="text-xl font-semibold mb-4">Agregar Nueva Tarea</h2>
+        <form id="task-form" class="space-y-4">
+            <div>
+                <label for="task-title" class="block mb-1 font-medium">Título:</label>
+                <input type="text" id="task-title" name="title" class="w-full border border-gray-300 p-2 rounded" placeholder="Ej: Comprar pan." required>
+            </div>
+            <div>
+                <label for="task-description" class="block mb-1 font-medium">Descripción:</label>
+                <textarea id="task-description" name="description" class="w-full border border-gray-300 p-2 rounded" placeholder="Ej: Comprar pan integral en la tienda." ></textarea>
+            </div>
+            <div>
+                <label for="task-due-date" class="block mb-1 font-medium">Fecha de Vencimiento:</label>
+                <input type="date" id="task-due-date" name="due-date" class="w-full border border-gray-300 p-2 rounded" required>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" aria-label="Agregar nueva tarea">Agregar Tarea</button>
+        </form>
+    </section>
+    <section>
+        <h2 class="text-xl font-semibold mb-4">Lista de Tareas</h2>
+        <ul id="task-list" class="space-y-4">
+            <!-- Las tareas se agregarán aquí dinámicamente -->
+        </ul>
+    </section>
+</main>
+
+
+   <script src="app.js"></script> 
+</body>
+</html>
